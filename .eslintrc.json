@@ -1,0 +1,70 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "ignorePatterns": ["node_modules", "dist", "build"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+   },
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "import"],
+  "rules": {
+    "no-inline-comments":"off",
+    "no-console":"off",
+    "no-alert":"off",
+    "react/state-in-constructor": 0,
+    "indent": ["off"],
+    "prettier/prettier": ["error", {"endOfLine": "auto"}],
+    "linebreak-style": [0, "unix"],
+    "quotes": ["error", "single",{ "avoidEscape": true }],
+    "semi": [2, "always"],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": 0,
+    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx","flow","typescript"] }],
+    "import/order": 
+    [2, {
+          "groups": [
+              "builtin",
+              "external",
+              "internal",
+              "parent",
+              "sibling",
+              "index"
+          ],
+          "newlines-between": "always"
+      }
+    ],
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "jsx-a11y/label-has-associated-control": "off",
+    "no-shadow": "off"
+    
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  }
+}

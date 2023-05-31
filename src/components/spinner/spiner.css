@@ -1,0 +1,8 @@
+.inner-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding-top: 15px;
+  margin: auto auto;
+}
